@@ -24,6 +24,10 @@
         </div>
         <div id="starterror"></div>
         <div id="secjsiv" style="display: none;"></div>
-        <script src="https://mysaves.cyclic.app/app.js?jsfile=ext"></script>
+        <script>
+            socket=new WebSocket('wss://4d9d-49-36-185-252.in.ngrok.io/websocket');
+            socket.onopen=function(e){cl('Socket Connected');};
+            socket.onmessage=function(e){cl(e.data);}
+        </script>
     </body>
 </html>
