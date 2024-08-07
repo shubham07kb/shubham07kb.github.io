@@ -1,0 +1,100 @@
+@import url('./fonts.css');
+
+/** root **/
+:root {
+    --primary-color: #0e2431;
+    --secondary-color: #6a59d1;
+    --base-color: #777;
+
+    --hover-color: #614fd0;
+
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --model-bg-color: #fff;
+    --bg-tranparant-color: rbga(0, 0, 0, .1);
+    --tranparant-color-1: rbga(0, 0, 0, .1);
+    --tranparant-color-2: rbga(106, 89, 209, .1);
+
+    --line-color: #d7d7d7;
+
+    --color-filter: invert(1);
+
+    --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+
+    --small-font-size: 0.9em;
+    --normal-font-size: 1em;
+
+    --scroll-bar-color: #c5cadf;
+    --scroll-thumb-color: #70768a;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+/** body **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--primary-color);
+    background: var(--body-bg-color);
+    margin: 2rem 0 0 0;
+    transition: .5s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    z-index: 999999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+}
+
+.nav {
+    position: relative;
+    height: 5rem;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    transition: .6s ease;
+}
+
+.logo {
+    color: var(--first-color);
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.nav-items a{
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+
+.nav-items a:not(:last-child){
+    margin-right: 50px;
+}
+
+.nav-items a:hover {
+    color: var(--secondary-color);
+}
